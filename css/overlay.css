@@ -1,0 +1,120 @@
+html,
+body {
+    position: relative;
+    background-color: #444;
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 950px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 1920px;
+    border: 1px solid black;
+}
+
+#toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#taskContainer {
+    opacity: 0;
+    transform: translate(50vw, 0) rotate(5deg) scale(0);
+    transition: ease-in-out all .4s;
+    position: absolute;
+    left: 500px;
+    top: 300px;
+    width: 920px;
+    height: 350px;
+    border: 10px solid black;
+    box-shadow: 0px 0px 0px 5px white;
+    border-radius: 25px;
+    display: flex;
+    overflow: hidden;
+}
+
+.innerContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.innerContainer .row {
+    flex-grow: 1;
+    display: flex;
+    word-wrap: break-word;
+}
+
+#name {
+    border-bottom: 10px solid black;
+    flex-grow: 2;
+    font-weight: 700;
+    flex-basis: 0;
+    font-size: 50px;
+    color: white;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, .5);
+    text-align: center;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#date {
+    background-color: white;
+    flex-grow: 1;
+    flex-basis: 0;
+    font-size: 25px;
+    color: black;
+}
+
+#talentContainer {
+    border-top: 10px solid black;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    font-weight: 400;
+    flex-basis: 0;
+    font-size: 40px;
+    color: white;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, .5);
+}
+
+.talentCell {
+    flex-grow: 1;
+    flex-basis: 0;
+    font-size: 40px;
+    height: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    justify-content: center;
+    word-wrap: break-word;
+    overflow: hidden;
+    padding-top: auto;
+    padding-bottom: auto;
+    display: flex;
+}
+
+.talentCell:not(:last-child) {
+    border-right: 10px solid black;
+}
+
+.talentCell:first-child {
+    text-align: left;
+}
+
+.talentCell:last-child {
+    text-align: right;
+}
+
+.talentCell:only-child {
+    text-align: center;
+}
+
+.hvCenter {
+    align-items: center;
+    justify-content: center;
+}
